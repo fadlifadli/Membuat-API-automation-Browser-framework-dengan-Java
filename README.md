@@ -8,3 +8,4 @@
 
 hasil capture:
 - 6 testing : [disini ya....](https://drive.google.com/file/d/1T8lp5kO5ldC3_XKk8h4l8uJX9629j1fW/view?usp=sharing)
+- Testing Negative : [disini ya...](https://drive.google.com/file/d/1qtuo1u_zPszBmkBFhv9eZE_Z_-2EaOfd/view?usp=sharing)
