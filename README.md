@@ -13,5 +13,5 @@ soal :
 
 
 hasil capture:
-- 6 testing uji API test Positif: [disini ya....](https://drive.google.com/file/d/1T8lp5kO5ldC3_XKk8h4l8uJX9629j1fW/view?usp=sharing)
+- 6 testing uji API test Positif : [disini ya....](https://drive.google.com/file/d/1T8lp5kO5ldC3_XKk8h4l8uJX9629j1fW/view?usp=sharing)
 - uji API Testing Negative : [disini ya...](https://drive.google.com/file/d/1qtuo1u_zPszBmkBFhv9eZE_Z_-2EaOfd/view?usp=sharing)
