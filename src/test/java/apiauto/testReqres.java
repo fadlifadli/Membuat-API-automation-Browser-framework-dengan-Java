@@ -228,4 +228,29 @@ public class testReqres {
                 .assertThat().body("token",Matchers.equalTo("QpwL5tke4Pnpja7X4"));
 
     }
+
+    @Test
+    public  void BatasUjiAPI() {
+
+        String valueName = "   _Fadhli123123*&@*@!*!&@*--------";
+        String valueJob  = " 213";
+
+        JSONObject bodyObj = new JSONObject();
+
+        bodyObj.put("name", valueName);
+        bodyObj.put("job", valueJob);
+
+        given()
+                .header("Content-Type", "application/json")
+                .header("Accept", "appliaction/json")
+                .body(bodyObj.toString())
+                .when()
+                .post("https://reqres.in/api/users")
+                .then().log().all()
+                .assertThat().statusCode(201)
+                .assertThat().body("name",Matchers.equalTo(valueName))
+                .assertThat().body("job",Matchers.equalTo(valueJob));
+
+
+    }
 }
