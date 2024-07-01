@@ -164,4 +164,20 @@ public class testReqres {
                 .assertThat().statusCode(200)
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchema(file));
     }
+
+    @Test
+    public void testValidateFAILJsonSchemaGetSingleUser(){
+//        define baseURI
+        RestAssured.baseURI = "https://reqres.in/";
+//        data to get
+        int userToGet = 5;
+//        file Json Schema to compare
+        File file =new File("src/test/resources/jsonSchema/GetSingleUserSchema.json");
+//        test get api/user/5
+        given().log().all()
+                .when().get("api/users/" + userToGet)
+                .then().log().all()
+                .assertThat().statusCode(201)
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchema(file));
+    }
 }
