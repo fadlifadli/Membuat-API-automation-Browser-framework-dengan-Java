@@ -204,4 +204,28 @@ public class testReqres {
                 .assertThat().statusCode(201)
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchema(file));
     }
+
+    @Test
+    public  void POSTFailInputRegisterUser() {
+
+        String ValueEmail = "";
+        String ValuePassword  = "pistol";
+
+        JSONObject bodyObj = new JSONObject();
+
+        bodyObj.put("email", ValueEmail);
+        bodyObj.put("password", ValuePassword);
+
+        given()
+                .header("Content-Type", "application/json")
+                .header("Accept", "appliaction/json")
+                .body(bodyObj.toString())
+                .when()
+                .post("https://reqres.in/api/register")
+                .then().log().all()
+                .assertThat().statusCode(200)
+                .assertThat().body("id",Matchers.equalTo(4))
+                .assertThat().body("token",Matchers.equalTo("QpwL5tke4Pnpja7X4"));
+
+    }
 }
