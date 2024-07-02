@@ -14,6 +14,6 @@ soal :
 
 hasil capture:
 - 6 testing uji API test Positif : [disini ya....](https://drive.google.com/file/d/1T8lp5kO5ldC3_XKk8h4l8uJX9629j1fW/view?usp=sharing)
-  - uji API Testing Negative : - [disini ya...](https://drive.google.com/file/d/1qtuo1u_zPszBmkBFhv9eZE_Z_-2EaOfd/view?usp=sharing)
-                               - [Missing Input dsni ya](https://drive.google.com/file/d/178RkxTQUx_cOSuQ1-hVmEwcsiEnUe7Rd/view?usp=sharing)
+  - uji API Testing Negative : - [disini ya...](https://drive.google.com/file/d/1PY-jkUswGKTYgQ_wN07dEen7ClN8Nciz/view?usp=sharing)
+                               - [Missing Input dsni ya](https://drive.google.com/file/d/1s34kc-tuaQCM20rTQaw4AyKwJEebnYf0/view?usp=sharing)
   - Reporting by allure - [disini yaa.....](https://drive.google.com/file/d/1Uxcair150omZdpRMP-yIk4jOdJlHnZ-1/view?usp=sharing)

@@ -201,7 +201,7 @@ public class testReqres {
         given().log().all()
                 .when().get("api/users/" + userToGet)
                 .then().log().all()
-                .assertThat().statusCode(201)
+                .assertThat().statusCode(200)
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchema(file));
     }
 
@@ -223,9 +223,9 @@ public class testReqres {
                 .when()
                 .post("https://reqres.in/api/register")
                 .then().log().all()
-                .assertThat().statusCode(200)
-                .assertThat().body("id",Matchers.equalTo(4))
-                .assertThat().body("token",Matchers.equalTo("QpwL5tke4Pnpja7X4"));
+                .assertThat().statusCode(400)
+                .assertThat().body("id",Matchers.equalTo(null))
+                .assertThat().body("token",Matchers.equalTo(null));
 
     }
 
