@@ -70,6 +70,16 @@ public class selenium {
         Assertions.assertEquals(title, "Swag Labs");
         String url = driver.getCurrentUrl();
         Assertions.assertEquals(url, "https://www.saucedemo.com/inventory.html");
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.id("shopping_cart_container")).click();
+        driver.findElement(By.id("item_4_title_link"));
+        driver.findElement(By.id("checkout")).click();
+        driver.findElement(By.id("first-name")).sendKeys("visual_user");
+        driver.findElement(By.id("last-name")).sendKeys("Last_visual_user");
+        driver.findElement(By.id("postal-code")).sendKeys("Post_visual_user");
+        driver.findElement(By.id("continue")).click();
+        driver.findElement(By.id("finish")).click();
+        driver.findElement(By.xpath("//h2[contains(text(),'Thank you for your order!')]"));
 //        driver.quit();
     }
 
