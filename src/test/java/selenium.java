@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-
+import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -59,12 +59,18 @@ public class selenium {
     public void Locator(){
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get("https://saucedemo.com/");
-        driver.findElement(By.cssSelector("input#user-name"));
-        driver.findElement(By.xpath("//*[@id=\"password\"]"));
-        driver.findElement(By.id("login-button"));
-        driver.quit();
+        driver.findElement(By.cssSelector("input#user-name")).sendKeys("visual_user");
+        driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
+        String title = driver.getTitle();
+        Assertions.assertEquals(title, "Swag Labs");
+        String url = driver.getCurrentUrl();
+        Assertions.assertEquals(url, "https://www.saucedemo.com/inventory.html");
+//        driver.quit();
     }
 
 }
