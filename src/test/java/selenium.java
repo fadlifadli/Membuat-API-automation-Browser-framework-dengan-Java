@@ -11,7 +11,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.junit.jupiter.api.Assertions;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class selenium {
@@ -81,6 +80,32 @@ public class selenium {
         driver.findElement(By.id("finish")).click();
         driver.findElement(By.xpath("//h2[contains(text(),'Thank you for your order!')]"));
 //        driver.quit();
+    }
+
+    @Test
+    public  void BrowserMethodTest() {
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
+        driver.get("https://saucedemo.com/");
+
+        String title = driver.getTitle();
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("Title pada halam web: " +title);
+        System.out.println("URL saat ini pada halaman web: " +currentURL);
+        driver.quit();
+
+    }
+
+    @Test
+    public void LocatorSaudemoTest() {
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
+        driver.get("https://saucedemo.com/");
+
+        driver.findElement(By.cssSelector("input#user-name")).sendKeys("standard_user");
+        driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
+        driver.close();
     }
 
 }
