@@ -1,4 +1,4 @@
-package saucedemo;
+package saucedemo.WebElement;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
